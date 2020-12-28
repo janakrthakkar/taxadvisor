@@ -54,6 +54,7 @@ section {
 }
 
 .btn {
+  display: inline-block;
   position: relative;
   background: #7d5df3;
   border-radius: 10rem;
@@ -202,9 +203,9 @@ nav {
 }
 
 .content-details p {
-  font-size: 1.7rem;
+  font-size: 1.6rem;
   opacity: 0.6;
-  margin: 3rem 0 4rem 0;
+  margin: 2rem 0;
   text-transform: capitalize;
   line-height: 2.4rem;
 }
@@ -218,7 +219,6 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
 }
 
 .hero-section .traingle-shape,
