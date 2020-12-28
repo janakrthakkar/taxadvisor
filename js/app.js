@@ -11,41 +11,6 @@ function closeNav() {
   header.classList.remove("active");
 }
 
-//scroll reveal
-window.sr = ScrollReveal();
-
-sr.reveal(".animate-left", {
-  origin: "left",
-  duration: "600",
-  distance: "25rem",
-  delay: 500,
-  reset: true,
-});
-
-sr.reveal(".animate-right", {
-  origin: "right",
-  duration: "600",
-  distance: "25rem",
-  delay: 500,
-  reset: true,
-});
-
-sr.reveal(".animate-top", {
-  origin: "top",
-  duration: "600",
-  distance: "25rem",
-  delay: 500,
-  reset: true,
-});
-
-sr.reveal(".animate-bottom", {
-  origin: "bottom",
-  duration: "600",
-  distance: "25rem",
-  delay: 500,
-  reset: true,
-});
-
 //intro
 const tl = gsap.timeline({ defaults: { ease: "power1.Inout" } });
 
