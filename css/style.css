@@ -1,0 +1,845 @@
+/******************************* Global Styles **************************/
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Text&family=Work+Sans&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Work Sans", sans-serif;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Crimson Text", serif;
+}
+
+a {
+  text-decoration: none;
+  color: #f5f7fb;
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+}
+
+li {
+  list-style: none;
+}
+
+section {
+  padding: 5rem 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 110rem;
+  padding: 0 1.5rem;
+  margin: 0 auto;
+}
+
+.btn {
+  position: relative;
+  background: #7d5df3;
+  border-radius: 10rem;
+  padding: 1.2rem 4rem;
+  font-size: 1.4rem;
+  color: #fff;
+  text-transform: uppercase;
+  transition: all 450ms ease-in;
+}
+
+.btn:hover {
+  background: #704cff;
+}
+
+.btn:not(:last-child) {
+  margin-right: 2rem;
+}
+
+/*********************** Header Section *********************/
+
+header {
+  width: 100%;
+  height: 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background: #f5f7fb;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-logo img {
+  width: 6rem;
+}
+
+.active .open-menu,
+.active .close-menu {
+  filter: invert(100%);
+}
+
+.hamburger-menu {
+  width: 3.4rem;
+  cursor: pointer;
+  position: relative;
+  z-index: 1500;
+}
+
+.hamburger-menu .close-menu,
+.nav-btn {
+  display: none;
+}
+
+.nav-list {
+  position: fixed;
+  top: -26rem;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  background: #7859fc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1400;
+  opacity: 0;
+  transition: all 650ms ease-in-out;
+}
+
+.active .nav-list {
+  opacity: 1;
+  top: 0rem;
+}
+
+.nav-link {
+  color: #fafafa;
+  font-size: 2rem;
+  text-transform: uppercase;
+  position: relative;
+  display: block;
+  letter-spacing: 1px;
+}
+
+.nav-link::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0.2rem;
+  background: #f5f7fb;
+  left: 0;
+  bottom: -0.5rem;
+  border-radius: 10rem;
+  transform-origin: center;
+  transform: scale(0);
+  transition: all 350ms ease-in;
+}
+
+.nav-link:hover::before {
+  transform: scale(1);
+}
+
+.nav-item:not(:last-child) {
+  margin-bottom: 4.5rem;
+}
+
+/******************************* Hero Styles ******************************/
+
+.hero-section {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.content img {
+  width: 100%;
+  max-width: 30rem;
+  height: 35rem;
+  object-fit: cover;
+  border-radius: 10rem 0 10rem 0;
+}
+
+.content {
+  display: grid;
+  align-items: center;
+  text-align: center;
+  grid-template-columns: 1fr;
+  margin-top: 2rem;
+}
+
+.content-details {
+  max-width: 100%;
+  position: relative;
+}
+
+.content-details h1 {
+  color: #373737;
+  font-size: 3rem;
+}
+
+.content-details p {
+  font-size: 1.7rem;
+  opacity: 0.6;
+  margin: 3rem 0 4rem 0;
+  text-transform: capitalize;
+  line-height: 2.4rem;
+}
+
+.content-img {
+  margin: 2rem 0;
+  position: relative;
+}
+
+.content-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.hero-section .traingle-shape,
+.hero-section .letter-x,
+.hero-section .circle-shape,
+.hero-section .wave-shape {
+  display: none;
+}
+
+.hero-section .dot-pattern {
+  width: 10rem;
+  position: absolute;
+  top: 12%;
+  z-index: -1;
+  left: 1%;
+}
+
+.hero-section .curved-line {
+  position: absolute;
+  filter: invert(90%);
+  top: 50%;
+  right: 5%;
+  width: 8rem;
+  z-index: -1;
+}
+
+/******************************* Service Styles ***************************/
+
+.global-heading {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #373737;
+  position: relative;
+}
+
+.global-heading .headline {
+  display: block;
+  font-size: 4rem;
+  text-transform: uppercase;
+}
+
+.global-heading .sub-headline {
+  font-size: 1.7rem;
+  font-weight: lighter;
+  font-family: "Work Sans", sans-serif;
+  text-transform: uppercase;
+  opacity: 0.6;
+}
+
+.global-heading .headline::before {
+  content: "";
+  position: absolute;
+  width: 8rem;
+  height: 0.6rem;
+  left: 40%;
+  bottom: -10%;
+  background: #7859fc;
+  border-radius: 10rem;
+}
+
+.grid-container {
+  margin-top: 5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-gap: 4rem;
+}
+
+.grid-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  justify-content: space-evenly;
+  padding: 1.5rem;
+}
+
+.grid-item.service {
+  background: #7859fc;
+  color: #f5f7fb;
+  height: 34rem;
+  border-radius: 5rem 0 5rem 0;
+  transition: all 650ms ease;
+}
+
+.grid-item.service:hover {
+  transform: scale(1.06);
+  border-radius: 1rem;
+}
+
+.service-icon {
+  width: 8rem;
+  filter: invert(100%);
+}
+
+.service-name {
+  font-size: 2.8rem;
+  margin: 2rem 0;
+}
+
+.service-details {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+}
+
+/************************* Achievement Section ****************/
+
+.shapes-section {
+  background: #7d5df3;
+  color: #fff;
+  padding: 4rem;
+  position: relative;
+  min-height: 40vh;
+}
+
+.shapes-section .circle-shape,
+.shapes-section .traingle-shape,
+.shapes-section .wave-shape,
+.shapes-section .curved-line,
+.shapes-section .square-shape {
+  width: 3rem;
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  filter: invert(60%);
+}
+
+.shapes-section .circle-shape {
+  display: none;
+}
+
+.shapes-section .traingle-shape {
+  display: none;
+}
+
+.shapes-section .wave-shape {
+  left: 80%;
+  top: 40%;
+}
+
+.shapes-section .curved-line {
+  transform: rotate(180deg);
+  top: 80%;
+  width: 4rem;
+}
+
+.shapes-section .square-shape {
+  display: none;
+}
+
+.achievemnt-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.achievement {
+  border: 2px solid #fff;
+  padding: 0.5rem;
+  border-radius: 100%;
+  text-align: center;
+  width: 15rem;
+  height: 15rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 4rem auto;
+}
+
+.achievement:nth-child(2) {
+  border: 4px solid #fafafa;
+}
+
+.achievement h1 {
+  font-size: 2.5rem;
+}
+
+/************************* Team Section ****************/
+
+.grid-item.team-member {
+  background: #fafafa;
+  position: relative;
+  border-radius: 1rem;
+  color: #333;
+  z-index: 22;
+}
+
+.team-member::before {
+  content: "";
+  position: absolute;
+  width: 20%;
+  height: 1vh;
+  left: 40%;
+  top: 46%;
+  /* bottom: 0; */
+  background: #7859fc;
+  border-radius: 10rem;
+  z-index: -1;
+  transition: all 650ms ease-in-out;
+}
+
+.team-member:first-child::before {
+  top: 45%;
+}
+
+.team-member:hover::before {
+  width: 100%;
+  height: 100%;
+  left: 0;
+  opacity: 1;
+  top: 0;
+  border-radius: 10rem 0 10rem 0;
+}
+
+.team-member:hover {
+  color: #f5f7fb;
+}
+
+.team-member:hover .social-media {
+  border-top: 1px solid rgba(255, 255, 255, 0.151);
+}
+
+.team-member:hover .social-media img {
+  filter: invert(100%);
+}
+
+.team-member .team-memberImg {
+  width: 15rem;
+  height: 15rem;
+  object-fit: cover;
+  border-radius: 10rem;
+}
+
+.team-member .member-name {
+  font-size: 3.2rem;
+}
+
+.team-member .member-job {
+  opacity: 0.9;
+  font-size: 2rem;
+  margin: 2rem 0;
+}
+
+.team-member .member-info {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  text-transform: capitalize;
+  line-height: 2rem;
+}
+
+.team-member .social-media {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  border-top: 1px solid rgba(0, 0, 0, 0.151);
+  margin-top: 1.5rem;
+  padding: 2rem 0;
+  width: 100%;
+}
+
+.team-member .social-media img {
+  width: 3rem;
+  filter: invert(30%);
+}
+
+/************************* Branches Section ****************/
+
+.branch-section .branches-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  color: #f5f7fb;
+}
+
+.branch-section .branches {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 30rem;
+  min-height: 22rem;
+  margin: 4rem auto;
+  border: 1px solid #f5f7fb;
+  padding: 2rem;
+  border-radius: 2rem 0 2rem 0;
+  transition: all 650ms ease-in;
+}
+
+.branch-section .branches:hover {
+  background: #704cff;
+}
+
+.branch-section .branches h3 {
+  font-size: 2rem;
+  text-transform: capitalize;
+  margin: 2rem 0;
+}
+
+.location-icon {
+  width: 5rem;
+  filter: invert(100%);
+}
+
+/**************************** About Section **********************/
+
+.about-section .content {
+  margin-top: 5rem;
+}
+
+.about-details {
+  text-transform: capitalize;
+  line-height: 2rem;
+  margin: 2rem 0;
+}
+
+.about-section .nav-btn {
+  margin-top: 2rem;
+}
+
+.about-section .content-img img {
+  border-radius: 0 10rem 0 10rem;
+}
+
+.about-section {
+  position: relative;
+}
+
+.about-section .dot-pattern,
+.about-section .wave-shape {
+  width: 10rem;
+  right: 15%;
+  top: 20%;
+  position: absolute;
+  filter: invert(10%);
+  z-index: -1;
+}
+
+.about-section .wave-shape {
+  width: 6rem;
+  right: 75%;
+  top: 60%;
+  filter: invert(60%);
+}
+
+/*************************** Contact Section ******************/
+
+.contact-section .contact-wrapper {
+  display: flex;
+  justify-content: space-around;
+  text-align: left;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.contact-wrapper > div {
+  margin: 2rem 0;
+}
+
+.direct-contact {
+  display: flex;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+.direct-contact a {
+  font-size: 1.6rem;
+}
+
+.call-icon,
+.mail-icon {
+  width: 3rem;
+  filter: invert(100%);
+  margin-right: 1rem;
+}
+
+.contact-sm li a > img {
+  width: 4rem;
+  filter: invert(100%);
+}
+
+.contact-wrapper .navbar-links {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-wrapper .navbar-links a {
+  font-size: 1.8rem;
+  margin: 1rem 0;
+}
+
+.contact-wrapper .navbar-links a:hover,
+.direct-contact a:hover {
+  border-bottom: 1px solid #f5f7fb;
+}
+
+.contact-wrapper .contact-sm {
+  display: flex;
+  margin-top: 3rem;
+}
+
+.contact-wrapper .contact-sm li:first-child {
+  margin-right: 5rem;
+}
+
+.contact-wrapper .contact-sm li:hover {
+  transition: all 350ms ease-in;
+  transform: translateY(-1.4rem);
+}
+
+/****************************** Intro Text ***********************/
+.intro,
+.intro-slider {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 120vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #704cff;
+  z-index: 9999999;
+}
+.intro-text {
+  color: #fff;
+  font-size: clamp(1.4rem, 10vw, 8rem);
+  margin-top: -30rem;
+}
+.intro-slider {
+  background: #7859fc;
+  transform: translateY(100%);
+}
+.intro-text-hide {
+  overflow: hidden;
+}
+.intro-text-hide span {
+  display: inline-block;
+  transform: translateY(100%);
+}
+/****************************** Responsive ***********************/
+
+@media screen and (min-width: 850px) {
+  .hero-section .traingle-shape {
+    top: 20%;
+    right: 10%;
+    display: block;
+    width: 3rem;
+    position: absolute;
+    filter: invert(80%);
+  }
+
+  .hero-section .wave-shape {
+    position: absolute;
+    filter: invert(80%);
+    top: 70%;
+    left: 35%;
+    width: 8rem;
+    z-index: -1;
+  }
+
+  .hero-section .curved-line {
+    left: 5%;
+  }
+
+  .hero-section .letter-x {
+    top: 50%;
+    right: 5%;
+    display: block;
+    position: absolute;
+    width: 3rem;
+    filter: invert(90%);
+  }
+
+  .hero-section .circle-shape {
+    top: 30%;
+    left: 35%;
+    width: 3rem;
+    display: block;
+    position: absolute;
+    filter: invert(80%);
+  }
+
+  .hero-section .dot-pattern {
+    position: absolute;
+    width: 25rem;
+    top: 75%;
+    left: 70%;
+    filter: invert(10%);
+    z-index: -1;
+  }
+
+  .hamburger-menu {
+    display: none;
+  }
+
+  .nav-btn {
+    display: inline-block;
+  }
+
+  .nav-list {
+    position: initial;
+    width: initial;
+    height: initial;
+    flex-direction: row;
+    justify-content: initial;
+    background: transparent;
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .nav-link {
+    color: #373737;
+    font-size: 1.6rem;
+    transition: all 650ms ease;
+  }
+
+  .nav-link::before {
+    display: none;
+  }
+
+  .nav-link:hover {
+    color: #7859fc;
+  }
+
+  .nav-item:not(:last-child) {
+    margin-right: 5rem;
+    margin-bottom: 0;
+  }
+
+  .hero-section,
+  .about-section {
+    display: flex;
+    align-items: center;
+  }
+
+  .content {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+
+  .content-img {
+    order: 2;
+    margin: 0;
+  }
+
+  .content-img img {
+    max-width: 40rem;
+    height: 45rem;
+  }
+
+  .content-details {
+    max-width: 80%;
+    text-align: left;
+  }
+
+  .content-details h1 {
+    font-size: 4.5rem;
+  }
+
+  .content-cta {
+    justify-content: flex-start;
+  }
+
+  .content-img img {
+    width: 50rem;
+    height: 50rem;
+  }
+
+  .global-heading .headline::before {
+    left: 46%;
+  }
+
+  .shapes-section .circle-shape {
+    display: block;
+  }
+
+  .shapes-section .square-shape {
+    left: 86%;
+    display: block;
+  }
+
+  .shapes-section .wave-shape {
+    left: 40%;
+    top: 20%;
+  }
+
+  .shapes-section .traingle-shape {
+    top: 80%;
+    left: 65%;
+    display: block;
+  }
+
+  .about-section .dot-pattern,
+  .about-section .wave-shape {
+    width: 30rem;
+    right: 15%;
+    top: 15%;
+    position: absolute;
+    filter: invert(10%);
+    z-index: -1;
+  }
+
+  .about-section .wave-shape {
+    width: 10rem;
+    right: 40%;
+    top: 80%;
+    filter: invert(60%);
+  }
+
+  .contact-section .contact-wrapper {
+    flex-direction: row;
+  }
+}
+
+@media screen and (max-width: 355px) {
+  .team-member:first-child::before {
+    top: 42%;
+  }
+}
