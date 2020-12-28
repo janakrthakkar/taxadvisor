@@ -563,7 +563,7 @@ nav {
 .about-section .wave-shape {
   width: 6rem;
   right: 75%;
-  top: 60%;
+  top: 55%;
   filter: invert(60%);
 }
 
@@ -631,37 +631,6 @@ nav {
 .contact-wrapper .contact-sm li:hover {
   transition: all 350ms ease-in;
   transform: translateY(-1.4rem);
-}
-
-/****************************** Intro Text ***********************/
-.intro,
-.intro-slider {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 120vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #704cff;
-  z-index: 9999999;
-}
-.intro-text {
-  color: #fff;
-  font-size: clamp(1.4rem, 10vw, 8rem);
-  margin-top: -30rem;
-}
-.intro-slider {
-  background: #7859fc;
-  transform: translateY(100%);
-}
-.intro-text-hide {
-  overflow: hidden;
-}
-.intro-text-hide span {
-  display: inline-block;
-  transform: translateY(100%);
 }
 /****************************** Responsive ***********************/
 
