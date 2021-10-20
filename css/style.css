@@ -297,7 +297,7 @@ nav {
 .grid-item.service {
   background: #7859fc;
   color: #f5f7fb;
-  height: 36rem;
+  height: auto;
   border-radius: 5rem 0 5rem 0;
   transition: all 650ms ease;
 }
@@ -412,7 +412,6 @@ nav {
   height: 1vh;
   left: 40%;
   top: 46%;
-  /* bottom: 0; */
   background: #7859fc;
   border-radius: 10rem;
   z-index: -1;
@@ -421,6 +420,10 @@ nav {
 
 .team-member:first-child::before {
   top: 45%;
+}
+
+.team-member:last-child::before {
+  top: 57%;
 }
 
 .team-member:hover::before {
